@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punjab Disaster Management</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: linear-gradient(to right, #f0f9ff, #e0f2fe); font-family: 'Segoe UI', sans-serif; }
+    h1, h2 { font-weight: bold; color: #0d3b66; }
+    .disaster-section { background: #fff; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 40px; transition: transform 0.3s; }
+    .disaster-section:hover { transform: translateY(-5px); }
+    .disaster-section h2 { color: #ff4500; }
+    .quiz-section { background: #ffffff; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 25px; margin-top: 50px; }
+    .quiz-question { margin-bottom: 20px; }
+    .btn-primary { background-color: #0d6efd; border: none; border-radius: 25px; padding: 10px 20px; transition: 0.3s; }
+    .btn-primary:hover { background-color: #084298; }
+    .result { font-weight: bold; margin-top: 20px; font-size: 18px; color: green; }
+    #certificate { display: none; margin-top: 30px; text-align: center; }
+    footer { text-align: center; padding: 20px; margin-top: 40px; background: #0d3b66; color: white; border-radius: 10px; }
+    .disaster-flex { display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+    .disaster-flex iframe { flex: 0 0 350px; max-width: 100%; border-radius: 10px; }
+    .disaster-info { flex: 1; min-width: 250px; }
+  </style>
+</head>
+<body>
+  <div class="container py-5"><hr>
+    <h1 class="text-center mb-4">🌍 Punjab Disaster Management</h1>
+    <p class="text-center lead">Explore major disasters in Punjab and learn survival tips. Test your knowledge with the quiz below.</p>
+    <hr><br>
+
+    <!-- Disaster Sections (same as before, not repeated for brevity) -->
+    <!-- ... (your disaster sections here) ... -->
+
+    <!-- 1 Floods -->
+    <div class="disaster-section">
+      <h2>1. Floods</h2>
+      <div class="disaster-flex">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/udRNUBHbE0o" allowfullscreen></iframe>
+        <div class="disaster-info">
+          <p>Punjab faces floods mainly due to overflowing of rivers like Sutlej and Beas during heavy monsoons. Floods damage crops, homes, and cause displacement of people. 
+          <br><strong>Survival Tip:</strong> Move to higher ground, avoid walking in flood water, and store emergency supplies like food and clean water.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ...repeat for other disasters... -->
+
+    <!-- 2 Drought -->
+    <div class="disaster-section">
+      <h2>2. Drought / Water Scarcity</h2>
+      <div class="disaster-flex">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oFxdcFMpcxM" allowfullscreen></iframe>
+        <div class="disaster-info">
+          <p>Excessive groundwater usage and low rainfall create water scarcity in Punjab. Farmers are worst affected as crops fail. 
+          <br><strong>Survival Tip:</strong> Store water wisely, practice rainwater harvesting, and grow less water-intensive crops.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ...repeat for other disasters... -->
+
+    <!-- 3 Heatwaves -->
+    <div class="disaster-section">
+      <h2>3. Heatwaves</h2>
+      <div class="disaster-flex">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fLu080UX25o" allowfullscreen></iframe>
+        <div class="disaster-info">
+          <p>During peak summer, temperatures in Punjab often cross 45°C, leading to heat strokes and dehydration. 
+          <br><strong>Survival Tip:</strong> Stay indoors in the afternoon, drink plenty of water, and wear light cotton clothes.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ...repeat for other disasters... -->
+
+    <!-- 4 Smog -->
+    <div class="disaster-section">
+      <h2>4. Air Pollution & Smog</h2>
+      <div class="disaster-flex">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/t7Q7y_xjR5E" allowfullscreen></iframe>
+        <div class="disaster-info">
+          <p>Smog in Punjab mainly occurs due to stubble burning in October-November. It causes respiratory diseases and reduces visibility. 
+          <br><strong>Survival Tip:</strong> Wear N95 masks, use air purifiers, and avoid outdoor activities during high smog days.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ...repeat for other disasters... -->
+
+    <!-- 5 Industrial Accidents -->
+    <div class="disaster-section">
+      <h2>5. Industrial Accidents</h2>
+      <div class="disaster-flex">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/C3PvWtzokbY" allowfullscreen></iframe>
+        <div class="disaster-info">
+          <p>Industrial hubs like Ludhiana often see chemical leaks, factory fires, and explosions. Workers and nearby residents are at high risk. 
+          <br><strong>Survival Tip:</strong> Follow safety drills, stay away from accident zones, and call emergency services quickly.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ...repeat for other disasters... -->
+
+    <!-- 6 Epidemics -->
+    <div class="disaster-section">
+      <h2>6. Epidemics / Diseases</h2>
+      <div class="disaster-flex">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8919Zm8Gi4U" allowfullscreen></iframe>
+        <div class="disaster-info">
+          <p>Dengue, malaria, and cholera spread during monsoon due to stagnant water and poor sanitation. 
+          <br><strong>Survival Tip:</strong> Keep surroundings clean, use mosquito nets, and drink boiled water.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ...repeat for other disasters... -->
+
+    <!-- 7 Road & Rail Accidents -->
+    <div class="disaster-section">
+      <h2>7. Road & Rail Accidents</h2>
+      <div class="disaster-flex">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1s8GAm95XrM" allowfullscreen></iframe>
+        <div class="disaster-info">
+          <p>Punjab faces frequent road and railway accidents due to dense transport networks and reckless driving. 
+          <br><strong>Survival Tip:</strong> Follow traffic rules, avoid drunk driving, and use railway crossings safely.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ...repeat for other disasters... -->
+
+    <!-- 8 Building Collapse -->
+    <div class="disaster-section">
+      <h2>8. Building Collapse / Urban Fire</h2>
+      <div class="disaster-flex">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7gHEtGY4chE?si=m0BN86xdpzd55jhd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+        <div class="disaster-info">
+          <p>Poor safety regulations and illegal construction cause building collapses and urban fires. 
+          <br><strong>Survival Tip:</strong> Use fire exits, avoid lifts during fire, and call emergency numbers immediately.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ...repeat for other disasters... -->
+
+    <!-- 9 Locust -->
+    <div class="disaster-section">
+      <h2>9. Locust Attacks</h2>
+      <div class="disaster-flex">
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/6iAfUomyCjo?si=Si4pBeF_86fjeavr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+        <div class="disaster-info">
+          <p>Locusts entering from Rajasthan sometimes destroy large areas of Punjab’s crops. 
+          <br><strong>Survival Tip:</strong> Use pest control sprays, coordinated spraying by farmers, and government monitoring systems.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ...repeat for other disasters... -->
+
+    <!-- 10 Earthquake -->
+    <div class="disaster-section">
+      <h2>10. Earthquake</h2>
+      <div class="disaster-flex">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jlLpZ9S2slQ" allowfullscreen></iframe>
+        <div class="disaster-info">
+          <p>Punjab is in a moderate seismic zone, so earthquakes can occur, especially near the Himachal border. 
+          <strong>Survival Tip:</strong> Drop, cover, and hold under strong furniture; stay away from windows and tall objects.</p>
+          <br><a href="earthquake_game" class="btn btn-primary mt-2" target="_blank">🎮 Play Earthquake Game</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUIZ Section -->
+    <div class="quiz-section">
+      <h2 class="text-center mb-4">📝 Quiz: Test Your Knowledge</h2>
+      <form id="quizForm">
+
+        <!-- Q1 -->
+        <hr>
+        <div class="quiz-question">
+          <p>1. Floods in Punjab are mainly caused by overflowing of which rivers?</p>
+          <input type="radio" name="q1" value="a"> Sutlej & Beas<br>
+          <input type="radio" name="q1" value="b"> Ganga & Yamuna<br>
+          <input type="radio" name="q1" value="c"> Narmada & Tapi<br>
+          <input type="radio" name="q1" value="d"> Krishna & Godavari
+        </div><hr>
+        <!-- ...repeat for all 15 questions as in your code... -->
+        <div class="quiz-question">
+          <p>2. What is the main reason for water scarcity in Punjab?</p>
+          <input type="radio" name="q2" value="a"> Overuse of groundwater & low rainfall<br>
+          <input type="radio" name="q2" value="b"> Melting glaciers<br>
+          <input type="radio" name="q2" value="c"> Heavy snowfall<br>
+          <input type="radio" name="q2" value="d"> Excessive rainfall
+        </div><hr>
+        <div class="quiz-question">
+          <p>3. During peak summers, Punjab’s temperature often crosses?</p>
+          <input type="radio" name="q3" value="a"> 30°C<br>
+          <input type="radio" name="q3" value="b"> 35°C<br>
+          <input type="radio" name="q3" value="c"> 45°C<br>
+          <input type="radio" name="q3" value="d"> 25°C
+        </div><hr>
+        <div class="quiz-question">
+          <p>4. Punjab smog mainly occurs due to?</p>
+          <input type="radio" name="q4" value="a"> Forest fires<br>
+          <input type="radio" name="q4" value="b"> Stubble burning<br>
+          <input type="radio" name="q4" value="c"> Vehicle accidents<br>
+          <input type="radio" name="q4" value="d"> Dust storms
+        </div><hr>
+        <div class="quiz-question">
+          <p>5. Industrial hubs like Ludhiana face disasters such as?</p>
+          <input type="radio" name="q5" value="a"> Volcanic eruptions<br>
+          <input type="radio" name="q5" value="b"> Chemical leaks & factory fires<br>
+          <input type="radio" name="q5" value="c"> Tsunamis<br>
+          <input type="radio" name="q5" value="d"> Hurricanes
+        </div><hr>
+        <div class="quiz-question">
+          <p>6. Which diseases spread in Punjab during monsoon?</p>
+          <input type="radio" name="q6" value="a"> Dengue, Malaria, Cholera<br>
+          <input type="radio" name="q6" value="b"> Chickenpox, Measles<br>
+          <input type="radio" name="q6" value="c"> Typhoid only<br>
+          <input type="radio" name="q6" value="d"> Common cold only
+        </div><hr>
+        <div class="quiz-question">
+          <p>7. A major cause of road accidents in Punjab is?</p>
+          <input type="radio" name="q7" value="a"> Reckless driving<br>
+          <input type="radio" name="q7" value="b"> Lack of fuel<br>
+          <input type="radio" name="q7" value="c"> No highways<br>
+          <input type="radio" name="q7" value="d"> Earthquake tremors
+        </div><hr>
+        <div class="quiz-question">
+          <p>8. Which practice causes building collapses?</p>
+          <input type="radio" name="q8" value="a"> Illegal construction & poor safety<br>
+          <input type="radio" name="q8" value="b"> Recycling<br>
+          <input type="radio" name="q8" value="c"> Gardening<br>
+          <input type="radio" name="q8" value="d"> Earthworm farming
+        </div><hr>
+        <div class="quiz-question">
+          <p>9. Locusts enter Punjab mostly from?</p>
+          <input type="radio" name="q9" value="a"> Rajasthan<br>
+          <input type="radio" name="q9" value="b"> Himachal Pradesh<br>
+          <input type="radio" name="q9" value="c"> Kashmir<br>
+          <input type="radio" name="q9" value="d"> Delhi
+        </div><hr>
+        <div class="quiz-question">
+          <p>10. Punjab falls in which seismic zone level?</p>
+          <input type="radio" name="q10" value="a"> High<br>
+          <input type="radio" name="q10" value="b"> Moderate<br>
+          <input type="radio" name="q10" value="c"> Low<br>
+          <input type="radio" name="q10" value="d"> No risk
+        </div><hr>
+        <div class="quiz-question">
+          <p>11. What should you do during floods?</p>
+          <input type="radio" name="q11" value="a"> Walk in floodwater<br>
+          <input type="radio" name="q11" value="b"> Move to higher ground<br>
+          <input type="radio" name="q11" value="c"> Swim across rivers<br>
+          <input type="radio" name="q11" value="d"> Ignore
+        </div><hr>
+        <div class="quiz-question">
+          <p>12. Best practice during a heatwave?</p>
+          <input type="radio" name="q12" value="a"> Wear woolen clothes<br>
+          <input type="radio" name="q12" value="b"> Drink plenty of water<br>
+          <input type="radio" name="q12" value="c"> Play outdoors<br>
+          <input type="radio" name="q12" value="d"> Skip meals
+        </div><hr>
+        <div class="quiz-question">
+          <p>13. To protect from smog, one should?</p>
+          <input type="radio" name="q13" value="a"> Wear N95 masks<br>
+          <input type="radio" name="q13" value="b"> Run outdoors<br>
+          <input type="radio" name="q13" value="c"> Keep windows open<br>
+          <input type="radio" name="q13" value="d"> Burn more stubble
+        </div><hr>
+        <div class="quiz-question">
+          <p>14. What should be avoided during an earthquake?</p>
+          <input type="radio" name="q14" value="a"> Drop, cover & hold<br>
+          <input type="radio" name="q14" value="b"> Stand near windows<br>
+          <input type="radio" name="q14" value="c"> Stay away from tall objects<br>
+          <input type="radio" name="q14" value="d"> Hide under strong furniture
+        </div><hr>
+        <div class="quiz-question">
+          <p>15. To reduce locust attack damage, farmers should?</p>
+          <input type="radio" name="q15" value="a"> Use pest control sprays<br>
+          <input type="radio" name="q15" value="b"> Ignore crops<br>
+          <input type="radio" name="q15" value="c"> Stop farming<br>
+          <input type="radio" name="q15" value="d"> Burn the entire field
+        </div><hr>
+
+        <button type="button"  class="btn btn-primary" onclick="checkQuiz()">Submit</button>
+      </form>
+      <div id="result" class="result"></div>
+      <div id="certificate" style="display:none; margin-top: 30px; text-align: center;">
+        <h3 style="color: #0d3b66;">🎉 Congratulations! Here is your Certificate:</h3>
+        <img src="certificate.jpg" alt="Certificate" style="max-width: 400px; width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); margin-top: 15px;">
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Punjab Disaster Management</p>
+    </footer>
+  </div>
+  <script>
+    function checkQuiz() {
+      let answers = {
+        q1: "a", q2: "a", q3: "c", q4: "b", q5: "b",
+        q6: "a", q7: "a", q8: "a", q9: "a", q10: "b",
+        q11: "b", q12: "b", q13: "a", q14: "b", q15: "a"
+      };
+      let score = 0;
+      let total = Object.keys(answers).length;
+
+      for (let q in answers) {
+        let selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) {
+          score++;
+        }
+      }
+      document.getElementById("result").innerHTML = 
+        `✅ You scored ${score} / ${total}`;
+
+      // Show certificate only if score > 10
+      if (score > 10) {
+        document.getElementById("certificate").style.display = "block";
+      } else {
+        document.getElementById("result").innerHTML = 
+      `❌ Sorry, try well! Rewatch the videos and try again.<br>You scored ${score} / ${total}`;
+    document.getElementById("certificate").style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

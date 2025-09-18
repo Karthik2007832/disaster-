@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Earthquake Awareness Mini-Game</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; background: #f3efe6; margin:0; padding:20px; }
+  .wrapper { max-width:900px; margin:0 auto; text-align:center; }
+  h1 { color:#2c3e50; }
+  #scene-box { position:relative; display:inline-block; border-radius:8px; overflow:hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+  #scene { width:800px; max-width:100%; display:block; }
+  #controls { margin-top:14px; }
+  button { background:#0277bd; color:white; border:none; padding:12px 18px; margin:8px; border-radius:8px; font-size:16px; cursor:pointer; }
+  button:disabled { opacity:0.5; cursor:not-allowed; }
+  #result { margin-top:14px; min-height:48px; font-weight:600; }
+  .wrong { color:#b71c1c; }
+  .right { color:#2e7d32; }
+  /* Shake animation for container */
+  .shake { animation: shake 0.5s infinite; }
+  @keyframes shake { 
+    0% { transform: translate(0px, 0px); } 
+    25% { transform: translate(-6px, 0px) rotate(-1deg); } 
+    50% { transform: translate(6px, 0px) rotate(1deg); } 
+    75% { transform: translate(-4px, 0px) rotate(-1deg); } 
+    100% { transform: translate(0px, 0px); }
+  }
+  footer { margin-top:24px; color:#555; font-size:14px; }
+  .note { font-size:14px; color:#444; margin-top:8px; }
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Earthquake Awareness — Mini Game</h1>
+    <p class="note">Click <strong>Start Earthquake</strong> to simulate a quake, then choose an action.</p>
+    <div id="scene-box">
+      <img id="scene" src="stand.png" alt="classroom scene" />
+    </div>
+    <div id="controls">
+      <div>
+        <button id="startBtn">Start Earthquake</button>
+        <button id="resetBtn" style="background:#6c757d;">Reset</button>
+      </div>
+      <div id="choices" style="display:none; margin-top:10px;">
+        <button id="runBtn">Run Outside</button>
+        <button id="hideBtn">Hide Under Table</button>
+      </div>
+      <div id="result" aria-live="polite"></div>
+    </div>
+
+    <audio id="quakeAudio" src="quake.mp3" preload="auto"></audio>
+    <audio id="wrongAudio" src="wrong.mp3" preload="auto"></audio>
+    <audio id="rightAudio" src="correct.mp3" preload="auto"></audio>
+
+    <footer>
+      Tip: If the audio doesn't play automatically, click <strong>Start Earthquake</strong> to allow the browser to play sounds.
+    </footer>
+  </div>
+
+<script>
+const startBtn = document.getElementById('startBtn');
+const resetBtn = document.getElementById('resetBtn');
+const choices = document.getElementById('choices');
+const runBtn = document.getElementById('runBtn');
+const hideBtn = document.getElementById('hideBtn');
+const scene = document.getElementById('scene');
+const sceneBox = document.getElementById('scene-box');
+const result = document.getElementById('result');
+const quakeAudio = document.getElementById('quakeAudio');
+const wrongAudio = document.getElementById('wrongAudio');
+const rightAudio = document.getElementById('rightAudio');
+
+const IMAGES = { 'stand': 'stand.png', 'run': 'run.png', 'hide':'hide.png' };
+
+// Helper to play audio safely
+function tryPlay(a){
+  if(!a) return;
+  a.currentTime = 0;
+  const p = a.play();
+  if(p && p.catch) p.catch(() => { /* ignore autoplay block */ });
+}
+
+startBtn.addEventListener('click', () => {
+  // start quake effect and show choices
+  sceneBox.classList.add('shake');
+  choices.style.display = 'block';
+  result.textContent = '';
+  tryPlay(quakeAudio);
+  startBtn.disabled = true;
+  // stop shaking after 4 seconds
+  setTimeout(() => sceneBox.classList.remove('shake'), 3500);
+});
+
+function choose(opt){
+  // stop quake sound and choices
+  try { quakeAudio.pause(); } catch(e){}
+  choices.style.display = 'none';
+
+  if(opt === 'run'){
+    // show running image and wrong message
+    scene.src = IMAGES.run;
+    result.innerHTML = '<span class="wrong">you should not run during earth quake</span>';
+    tryPlay(wrongAudio);
+  } else if(opt === 'hide'){
+    scene.src = IMAGES.hide;
+    result.innerHTML = '<span class="right">hiding is this correct option because you could not outrun a earthquake . it is very dangerous</span>';
+    tryPlay(rightAudio);
+  }
+}
+
+runBtn.addEventListener('click', () => choose('run'));
+hideBtn.addEventListener('click', () => choose('hide'));
+
+resetBtn.addEventListener('click', () => {
+  // reset to initial state
+  scene.src = IMAGES.stand;
+  result.textContent = '';
+  choices.style.display = 'none';
+  startBtn.disabled = false;
+  try { quakeAudio.pause(); quakeAudio.currentTime = 0; wrongAudio.pause(); wrongAudio.currentTime = 0; rightAudio.pause(); rightAudio.currentTime = 0; } catch(e){}
+});
+</script>
+</body>
+</html>
